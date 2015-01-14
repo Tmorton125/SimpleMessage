@@ -1,0 +1,10 @@
+Displaying Message
+
+-if !@message.blank?
+	%ul
+		%li= @message.name
+		%li= @message.content
+-else
+	Message is not available for display may have been removed from system
+
+=link_to :Messages, messages_path
