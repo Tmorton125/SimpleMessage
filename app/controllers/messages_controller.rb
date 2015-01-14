@@ -8,7 +8,6 @@ class MessagesController < ApplicationController
 		@message = Message.where(id: params[:id]).first
 	end
 
-	 	
 	def new
 		@message = Message.new
 	end
@@ -36,27 +35,23 @@ class MessagesController < ApplicationController
 
 	def update
       
-      @message = Message.where(id: params[:id]).first
+     	@message = Message.where(id: params[:id]).first
 
-       if @message.update(params[:message])
+     	if @message.update(params[:message])
        		redirect_to @message
-       else
+     	else
        		render 'edit'
-       end
+    	end
 	end
 
 	def destroy
 
 		@message = Messae.where(id: params[:id]).first
-
 		if !@message.blank? and @message.destroy
 			#no need to do anything at this time since we removed the message
 		else
 			flash[:error] = "Unable to perform requested Action"
-
 		end
-
 		redirect_to action: :index
-
 	end
 end
