@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-
+    
 	def index
 		@messages = Message.order(created_at: :desc)
 	end
@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
 	end
 
 	def update
-    	@message = Message.where(id: params[:id]).first
+		@message = Message.where(id: params[:id]).first
 
 		if @message.update(params[:message])
 			redirect_to @message
@@ -53,4 +53,8 @@ class MessagesController < ApplicationController
 		end
 		redirect_to action: :index
 	end
-end
+
+private
+  # Include any private methods here that won't be accessible through routes
+
+end # End of Controller
