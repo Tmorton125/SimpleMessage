@@ -34,14 +34,13 @@ class MessagesController < ApplicationController
 	end
 
 	def update
-      
-     	@message = Message.where(id: params[:id]).first
+    	@message = Message.where(id: params[:id]).first
 
-     	if @message.update(params[:message])
-       		redirect_to @message
-     	else
-       		render 'edit'
-    	end
+		if @message.update(params[:message])
+			redirect_to @message
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy
