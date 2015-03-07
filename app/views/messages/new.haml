@@ -1,4 +1,14 @@
-TODO New Message Form Here
+
+%h3= "New Message"
 
 %br
 = link_to :Messages, messages_path
+
+
+
+
+= form_for @message,  url: { action: "create"}, html: { class: "standard_form"} do |f|
+	= f.text_field :name
+	= datetime_field(:message, :delivery_time)
+	= f.text_area :content, size: "60X12"
+	= f.submit "Create"
