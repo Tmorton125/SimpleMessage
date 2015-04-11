@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
 
+  root 'messages#index'
+
   resources :messages
 
   # Example of regular route:

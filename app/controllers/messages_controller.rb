@@ -45,7 +45,7 @@ class MessagesController < ApplicationController
 
 	def destroy
 
-		@message = Messae.where(id: params[:id]).first
+		@message = Message.where(id: params[:id]).first
 		if !@message.blank? and @message.destroy
 			#no need to do anything at this time since we removed the message
 		else
