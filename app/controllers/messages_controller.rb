@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
 	def create
 		# Params contains the message object so create new instance of object
 		# on save successful save redirect to show action otherwise re-render new form with error messages
-		@message.new(params[:message])
+		@message= Message.new(message_params)
 
 		if @message.save
 			redirect_to @message
@@ -56,5 +56,9 @@ class MessagesController < ApplicationController
 
 private
   # Include any private methods here that won't be accessible through routes
+
+  def message_params
+  	 params.require(:message).permit(:name, :content, :delivery_time)
+  end
 
 end # End of Controller
