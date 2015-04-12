@@ -1,10 +1,14 @@
-Displaying Message
+%nav
+	=link_to :Messages, messages_path
+
+
+%h2= "Displaying Message"
 
 -if !@message.blank?
 	%ul
-		%li= @message.name
+		%li= "Name: #{@message.name}"
+		%li= @message.delivery_time
 		%li= @message.content
 -else
-	Message is not available for display may have been removed from system
+	%strong.error="Message is not available for display may have been removed from system!"
 
-=link_to :Messages, messages_path

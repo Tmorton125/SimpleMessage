@@ -1,20 +1,22 @@
+%nav
+	=link_to :Messages, messages_path
+
 
 %h3= "Edit Message - #{@message.name}"
 
-%br
-=link_to :Messages, messages_path
-
-
+%hr
 
 
 = form_for @message,  url: { action: "update"}, html: { class: "standard_form"} do |f|
-	= f.label :name
-	= f.text_field :name
-
-	= f.label :delivery_time
-	= datetime_field(:message, :delivery_time)
-
-	= f.label :content
-	= f.text_area :content, size: "60X12"
-	
-	= f.submit "Update"
+	%table
+		%tr
+			%td= f.label :name
+			%td= f.text_field :name
+		%tr
+			%td= f.label :delivery_time
+			%td= datetime_field(:message, :delivery_time)
+		%tr
+			%td= f.label :content
+			%td= f.text_area :content, size: "60X12"
+		%tr	
+			%td.button{colspan: 2}= f.submit "Update"

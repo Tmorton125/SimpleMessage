@@ -1,7 +1,7 @@
 %tr
 	%td= link_to message.name, message_path(message)
 	%td= message.content
-	%td= message.is_disabled
+	%td= message.is_disabled ? "Yes" : "No"
 	%td= message.created_at
 	%td= link_to "Edit", edit_message_path(message)
 	%td= link_to "Delete", message_path(message), method: :delete, data: {confirm: "Are you sure you want to delete #{message.name}?"}

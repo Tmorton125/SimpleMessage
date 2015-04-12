@@ -1,13 +1,13 @@
-%h3="Messages"
-
-%div.Container
+%nav
 	=link_to "New Message", new_message_path
 
 
-%br
+%h3="Messages"
+
+%hr
 
 %div.list
-	%table
+	%table.list
 		= render partial: 'header_row'
 		- @messages.each do |message|
 			= render partial: 'message', object: message

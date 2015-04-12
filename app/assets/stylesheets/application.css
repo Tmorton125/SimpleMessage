@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+
+ 	background-color: lightgrey;
+ 	padding: 5 5 5 5;
+
+ }
+
+ footer{
+ 	text-align: bottom;
+ 	margin-top: 50px;
+ }
+
+table.list{
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+	font-size: 14px;
+}
+
+td.button{
+	text-align: center;
+}
+
+.error{
+	color: red;
+}
