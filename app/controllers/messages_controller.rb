@@ -36,7 +36,7 @@ class MessagesController < ApplicationController
 	def update
 		@message = Message.where(id: params[:id]).first
 
-		if @message.update(params[:message])
+		if @message.update(message_params)
 			redirect_to @message
 		else
 			render 'edit'
