@@ -14,7 +14,7 @@
 			%td= f.text_field :name
 		%tr
 			%td= f.label :delivery_time
-			%td= datetime_field(:message, :delivery_time)
+			%td= datetime_field(:message, :delivery_time, class: 'datetime_field')
 		%tr
 			%td= f.label :content
 			%td= f.text_area :content, size: "60X12"
