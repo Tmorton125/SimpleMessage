@@ -26,6 +26,7 @@ class MessagesController < ApplicationController
 
 	def edit
 		@message = Message.where(id: params[:id]).first
+		@title = "test"
 
 		if @message.blank?
 			flash[:error] = "Unable to find requested Message"
