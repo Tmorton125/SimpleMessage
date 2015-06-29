@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   resources :messages
 
+
+    #TODO make as part of installer to add this to config file.
+    mount MultiDatabase::Engine => '/', as: 'multidatabase'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

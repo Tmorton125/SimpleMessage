@@ -1,19 +1,22 @@
 %nav
-	- breadcrumb :messages
+  - breadcrumb :messages
 
 
 %h3="Messages"
 
+%div.actionlist
+  .item
+    =link_to "Database Connections", multidatabase.connections_path
+  .item
+    =link_to "New Message", new_message_path
 
-=link_to "New Message", new_message_path
 
-%hr
 
 %div.list
-	%table.list
-		= render partial: 'header_row'
-		- @messages.each do |message|
-			= render partial: 'message', object: message
+  %table.list
+    = render partial: 'header_row'
+    - @messages.each do |message|
+      = render partial: 'message', object: message
 
 
 	
