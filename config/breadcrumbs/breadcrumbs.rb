@@ -1,5 +1,5 @@
 crumb :root do
-  link "Home", root_path
+  link "Home", main_app.root_path
 end
 
 # crumb :projects do
