@@ -20,3 +20,7 @@ Gemfile.lock
 Gemfile.lock
 
 server
+
+db/migrate/20151015175135_create_multi_database_adapters.multi_database.rb
+
+db/migrate/20151015175450_add_adapter_reference_to_connection_table.multi_database.rb

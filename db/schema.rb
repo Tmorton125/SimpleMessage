@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150517143734) do
+ActiveRecord::Schema.define(version: 20151015175450) do
 
   create_table "messages", force: true do |t|
     t.integer  "creator_id"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20150517143734) do
   add_index "messages", ["creator_id"], name: "idx_creator_id"
   add_index "messages", ["is_disabled"], name: "idx_is_disabled"
 
+  create_table "multi_database_adapters", force: true do |t|
+    t.string   "adapter",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "multi_database_adapters", ["adapter"], name: "index_multi_database_adapters_on_adapter"
+
   create_table "multi_database_database_connections", force: true do |t|
     t.string   "connection_name", null: false
     t.string   "database_name",   null: false
@@ -36,8 +44,10 @@ ActiveRecord::Schema.define(version: 20150517143734) do
     t.boolean  "active"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "adapter_id"
   end
 
+  add_index "multi_database_database_connections", ["adapter_id"], name: "index_multi_database_database_connections_on_adapter_id"
   add_index "multi_database_database_connections", ["connection_name"], name: "index_multi_database_database_connections_on_connection_name"
   add_index "multi_database_database_connections", ["database_name"], name: "index_multi_database_database_connections_on_database_name"
 
