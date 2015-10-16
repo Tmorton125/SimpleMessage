@@ -3,9 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 ready = ->
-		$(".datetime_field").datetimepicker(
-			{minDate: 0}
-		)
+		if $(".datetime_field").length > 0
+			$(".datetime_field").datetimepicker(
+				{minDate: 0}
+			)
 
 
 

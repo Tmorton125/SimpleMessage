@@ -1,0 +1,46 @@
+
+body {
+  background-color: lightgrey;
+  padding: 5px 5px 5px 5px;
+}
+
+footer {
+  text-align: bottom;
+  margin-top: 50px;
+}
+
+table.list {
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+td.button {
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+.error_explanation {
+  color: red;
+}
+
+.field_with_errors {
+  padding: 1px;
+  background-color: red;
+  display: table;
+}
+
+.normal-dropdown{
+  width: 130px;
+}
+
+#flash_error_message {
+  color: red;
+}
+
+#flash_success_message {
+  color: green;
+} 
