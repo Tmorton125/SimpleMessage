@@ -6,8 +6,8 @@ gem 'rails', '4.1.7'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-#Mysql Gem for Rails
-gem 'mysql2'
+#Mysql Gem for Rails Can't go to the latest release of mysql2 gem since current bug with rails 4.1.X and 4.2.X
+gem 'mysql2', '~> 0.3.18'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -30,6 +30,10 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'gretel'
 
 gem 'multi_database' #:path => '../MultiDatabase/'
+
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

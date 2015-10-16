@@ -8,13 +8,25 @@
 </head>
 <body>
 
-<%= breadcrumbs separator: " &raquo; " %>
+<div id="main-container" class="container-fluid">
+  <div class="row">
+    <div id="sidebar" class="col-xs-3">
+      <!-- sidebar content -->
+      <h3> SideBar Content </h3>
+	</div>
+	<div id="content" class="col-xs-9">
+	  <!-- main content -->
+      <%= breadcrumbs separator: " &raquo; " %>
+      <p id="flash_success_message"> <%= flash[:success] %></p>
+      <p id="flash_error_message">  <%= flash[:error]  %></p>
+      <% flash[:success] = nil %>
+      <% flash[:error] = nil %>
 
-<br/>
-
-<%= yield %>
-
-
+      <br/>
+      <%= yield %>
+    </div>
+  </div>
+</div>
 </body>
 
 <footer><cite>Demo By Timothy Morton</cite></footer>

@@ -15,50 +15,54 @@
 
  */
 
- body{
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 
- 	background-color: lightgrey;
- 	padding: 5 5 5 5;
 
- }
-
- footer{
- 	text-align: bottom;
- 	margin-top: 50px;
- }
-
-table.list{
-	padding: 5px 5px 5px 5px;
-	text-align: center;
-	font-size: 14px;
+body {
+  background-color: lightgrey;
+  padding: 5px 5px 5px 5px;
 }
 
-td.button{
-	text-align: center;
+footer {
+  text-align: bottom;
+  margin-top: 50px;
 }
 
-.error{
-	color: red;
+table.list {
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  font-size: 14px;
 }
 
-.error_explanation{
-	color: red;
+td.button {
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+.error_explanation {
+  color: red;
 }
 
 .field_with_errors {
-	padding: 1px;
-	background-color: red;
-	display: table;
+  padding: 1px;
+  background-color: red;
+  display: table;
 }
 
 .normal-dropdown{
-	width: 130px;
+  width: 130px;
 }
 
-#flash_error_message{
-	color: red;
+#flash_error_message {
+  color: red;
 }
 
-#flash_success_message{
-	color: green;
-}
+#flash_success_message {
+  color: green;
+} 
+
+
