@@ -50,3 +50,15 @@ td.button{
 	background-color: red;
 	display: table;
 }
+
+.normal-dropdown{
+	width: 130px;
+}
+
+#flash_error_message{
+	color: red;
+}
+
+#flash_success_message{
+	color: green;
+}
