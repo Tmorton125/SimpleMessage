@@ -19,18 +19,13 @@ td.button {
   text-align: center;
 }
 
+
 .error {
   color: red;
 }
 
 .error_explanation {
   color: red;
-}
-
-.field_with_errors {
-  padding: 1px;
-  background-color: red;
-  display: table;
 }
 
 .normal-dropdown{

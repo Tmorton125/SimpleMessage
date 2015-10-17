@@ -6,16 +6,22 @@
 
 
 
-= form_for @message,  url: { action: "create"}, html: { class: "standard_form"} do |f|
-	%table
-		%tr
-			%td= f.label :name
-			%td= f.text_field :name
-		%tr
-			%td= f.label :delivery_time
-			%td= datetime_field(:message, :delivery_time, class: 'datetime_field')
-		%tr
-			%td= f.label :content
-			%td= f.text_area :content, size: "60X12"
-		%tr
-			%td.button{colspan: 2}= f.submit "Create"
+= form_for @message,  url: { action: "create"}, html: { class: "form-horizontal"} do |f|
+
+	%div.form-group
+		= f.label :name, class: 'col-sm-2 control-label'
+		%div.col-sm-10
+			= f.text_field :name
+
+	%div.form-group
+		= f.label :delivery_time, class: 'col-sm-2 control-label'
+		%div.col-sm-10
+			= datetime_field(:message, :delivery_time, class: 'datetime_field')
+
+	%div.form-group
+		= f.label :content, class: 'col-sm-2 control-label'
+		%div.col-sm-10
+			= f.text_area :content, size: "60X12"
+	%div.form-group
+		%div.col-sm-offset-2.col-sm-10
+			= f.submit "Create", class: 'btn btn-primary btn-lg'	

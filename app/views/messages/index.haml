@@ -13,7 +13,7 @@
 
 
 %div.list
-  %table.list
+  %table.table-condensed
     = render partial: 'header_row'
     - @messages.each do |message|
       = render partial: 'message', object: message
