@@ -52,3 +52,6 @@ gem 'tzinfo-data', platforms: [:x64_mingw,:mingw, :mswin]
 #HAML Gem (elegant markup for html views)
 gem 'haml-rails'
 gem 'html2haml'
+
+# Load JSON
+gem 'json'

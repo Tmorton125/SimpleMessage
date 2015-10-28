@@ -8,6 +8,9 @@ ready = ->
 				{minDate: 0}
 			)
 
+		if $("#site_navigation").length > 0
+			$("#site_navigation").accordion()
+
 
 
 

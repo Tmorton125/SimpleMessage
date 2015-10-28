@@ -5,5 +5,4 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-MultiDatabase::Adapter.find_or_create_by(adapter: 'sqlite3')
-MultiDatabase::Adapter.find_or_create_by(adapter: 'mysql')
+MultiDatabase::Engine.load_seed

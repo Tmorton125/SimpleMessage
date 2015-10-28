@@ -151,6 +151,7 @@ DEPENDENCIES
   html2haml
   jbuilder (~> 2.0)
   jquery-rails
+  json
   multi_database
   mysql2 (~> 0.3.18)
   rails (= 4.1.7)
