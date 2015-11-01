@@ -32,3 +32,7 @@ select.input-sm{
 .alert-error {
   @extend .alert-danger
 }
+
+td, th{
+	padding: 10px;
+}
