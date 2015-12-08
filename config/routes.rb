@@ -11,8 +11,10 @@ Rails.application.routes.draw do
   resources :messages
 
 
-    #TODO make as part of installer to add this to config file.
-    mount MultiDatabase::Engine => '/', as: 'multidatabase'
+    #Goes through each of the engines manifest files and mounts them to the main application
+    $engine_manifests.each do |engine|
+      eval("mount #{engine[:engine]} => '/', as: '#{engine[:route_as]}'")
+    end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
