@@ -2,8 +2,11 @@
 <html>
 <head>
   <title>Simple Message Demo</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= render partial: 'layouts/load_engine_assets' %> 
+   
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -25,13 +28,14 @@
 		<%= render partial: 'shared/breadcrumb' %> 
 	    <!-- flash errors content -->
         <div class="col-xs-12">
-	      <% flash.each do |name, msg| -%>
-	        <%= content_tag :div, msg, class: "alert alert-#{name}" %>
+	       <% flash.each do |name, msg| -%>
+	         <%= content_tag :div, msg, class: "alert alert-#{name}" %>
 	       <% end -%>
 	       <% flash = Array.new %>
 	     </div>
         <!-- main content -->
         <%= yield %>
+        
     </div>
   </div>
 </div>

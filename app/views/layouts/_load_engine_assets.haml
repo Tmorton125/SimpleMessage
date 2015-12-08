@@ -1,0 +1,6 @@
+- folder = request[:controller].split("/").first
+
+- $engine_manifests.each do |e|
+  - if folder == e[:asset_folder]
+    = stylesheet_link_tag "#{e[:asset_folder]}", media: 'all', 'data-turbolinks-track' => true 
+    = javascript_include_tag "#{e[:asset_folder]}", 'data-turbolinks-track' => true
