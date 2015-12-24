@@ -2,4 +2,8 @@
 %nav.navbar.navbar-default{role: "navigation"}
   %div.container
     %div.navbar-header
-      = breadcrumbs separator: " &raquo; "
+      - if current_page?(main_app.root_url)
+        %ol.breadcrumb
+          %li= "Home"
+      - else
+        = breadcrumbs  style: :bootstrap

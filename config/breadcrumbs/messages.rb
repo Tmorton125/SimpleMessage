@@ -1,5 +1,5 @@
 crumb :messages do 
-	link "All Messages", messages_path
+	link "View Messages", messages_path
 end
 
 crumb :message do |message|
